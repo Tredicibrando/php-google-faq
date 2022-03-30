@@ -56,15 +56,7 @@ $faq = [
     ],
 ];
 
-    foreach ($faq as $value) {
-        echo $value["domanda"].'<br>';
-
-        foreach ($value as $risposta){
-        
-    }
-    
-
-}
+ 
 
 
 
@@ -83,6 +75,19 @@ $faq = [
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
+
+<?php 
+    foreach ($faq as $value) {
+        ?>
+        <h2> 
+            <?php echo $value["domanda"].'<br>'; ?>
+        </h2>
+        <p>
+            <?php echo $value["risposta"].'<br>'; ?>
+        </p>
+        <?php
+    }
+?>
 
 </body>
 </html>
